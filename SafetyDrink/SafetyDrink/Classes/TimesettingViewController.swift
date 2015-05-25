@@ -32,9 +32,9 @@ class TimesettingViewController: UIViewController {
         let connection:Connection = Connection()
         if let delegate:AppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
             if delegate.uuid != nil {
-                let requestParameter:Dictionary<String,String> = ["time":timeString,"uuid":delegate.uuid!,"tel":"08051928923"]
+                let requestParameter:Dictionary<String,String> = ["time":timeString,"uuid":delegate.uuid!,"tel":"00000000000"]
                 let connection:Connection = Connection()
-                connection.get("http://kajishima.azurewebsites.net/api/v1/set?", postData: requestParameter, getHandler: nil)
+                connection.get("http://example.com?", postData: requestParameter, getHandler: nil)
             }
         }
 

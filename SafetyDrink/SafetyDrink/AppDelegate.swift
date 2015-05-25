@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var param:Dictionary = Dictionary<String,String>()
         //param["uuid"] = self.uuid
         
-        connection.get("http://kajishima.azurewebsites.net/api/V1/onsei?",postData:param, getHandler: nil)
+        connection.get("http://example.com?",postData:param, getHandler: nil)
         
         return true
     }

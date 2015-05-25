@@ -39,13 +39,13 @@ class VoiceSettingViewController: UIViewController,UITextFieldDelegate {
             param["uuid"] = delegate.uuid
             param["message"] = sendmessage
             
-            connection.get("http://kajishima.azurewebsites.net/api/v1/createOnseiFile?", postData: param, getHandler: { (statusCode:Int, response:AnyObject, error:NSError?) -> Void in
+            connection.get("http://example.com?", postData: param, getHandler: { (statusCode:Int, response:AnyObject, error:NSError?) -> Void in
                 let filegetConnection:Connection = Connection()
                 var filegetParam:Dictionary = Dictionary<String,String>()
                 let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 filegetParam["uuid"] = delegate.uuid
                 
-                filegetConnection.get("http://kajishima.azurewebsites.net/api/V1/onsei?", postData: filegetParam, getHandler: nil)
+                filegetConnection.get("http://example.com?", postData: filegetParam, getHandler: nil)
             })
             
         }
